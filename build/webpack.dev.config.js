@@ -18,12 +18,23 @@ module.exports = {
     },
 
     module: {
-        rules: [{
-            test: /\.(js|jsx|ts|tsx)?$/,
-            exclude: path.join(__dirname, '../node_modules'),
-            use: ['babel-loader?cacheDirectory=true'],
-            include: path.join(__dirname, '../src')
-        }]
+        rules: [
+            {
+                test: /\.(js|jsx|ts|tsx)?$/,
+                exclude: path.join(__dirname, '../node_modules'),
+                use: ['babel-loader?cacheDirectory=true'],
+                include: path.join(__dirname, '../src')
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192
+                    }
+                }]
+            }
+        ]
     },
 
     devServer: {
