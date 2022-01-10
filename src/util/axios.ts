@@ -43,9 +43,9 @@ function getEnv(): string {
   const hostname = window.location.hostname;
   if (/localhost/i.test(hostname) || /127.0.0.1/i.test(hostname)) {
     return "dev";
-  } else if (/^sit/i.test(hostname)) {
+  } else if (/^sit/i.test(hostname)) {
     return "sit";
-  } else if (/^uat/i.test(hostname)) {
+  } else if (/^uat/i.test(hostname)) {
     return "uat";
   }
   return "dev";

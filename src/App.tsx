@@ -7,6 +7,10 @@ export default class App extends PureComponent<{}, {}> {
     }
 
     render() {
-        return <span>hello react1</span>
+        return <div>
+            <h1 className="text-3xl font-bold underline">
+                Hello world!
+            </h1>
+        </div>
     }
 }
